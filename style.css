@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f6f6f6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #3f51b5;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.main {
+  flex: 1;
+  max-width: 800px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.task-form {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.task-form h2 {
+  margin-bottom: 0.75rem;
+  color: #444;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.form-group span {
+  color: red;
+}
+
+input,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.6rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.btn {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #303f9f;
+}
+
+.task-list h2 {
+  margin-bottom: 0.75rem;
+}
+
+.tasks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.task-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.task-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.task-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.delete-btn {
+  align-self: flex-end;
+  background-color: #f44336;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .main {
+    margin: 1rem;
+  }
+
+  .tasks-container {
+    grid-template-columns: 1fr;
+  }
+}
